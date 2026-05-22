@@ -8,20 +8,17 @@
 </head>
 <body>
 
-    <!-- ШАПКА (такая же) -->
     <header class="header">
         <div class="container">
             <div class="header__inner">
-                <a href="index.html" class="logo">
-                    <img src="https://via.placeholder.com/120x40?text=YouTalk" alt="YouTalk">
-                </a>
+                <a href="index.html" class="logo">YouTalk</a>
                 <nav class="nav">
                     <ul class="nav__list">
                         <li><a href="#">О нас</a></li>
                         <li><a href="#">Тарифы</a></li>
                         <li><a href="#">Для бизнеса</a></li>
                         <li><a href="#">Психологам</a></li>
-                        <li><a href="#">Блог</a></li>
+                        <li><a href="index.html">Блог</a></li>
                         <li><a href="#">Вебинары</a></li>
                     </ul>
                 </nav>
@@ -33,21 +30,15 @@
         </div>
     </header>
 
-    <!-- ОСНОВНОЙ КОНТЕНТ СТАТЬИ -->
-    <main class="main">
+    <main>
         <div class="container">
-
-            <!-- Хлебные крошки -->
             <div class="breadcrumbs">
                 <a href="index.html">Главная</a> / 
                 <a href="index.html">Блог</a> / 
                 <span>Ответственны ли мы за чужие чувства?</span>
             </div>
 
-            <!-- Гибкий layout: статья + сайдбар -->
             <div class="article-layout">
-                
-                <!-- Левая колонка: статья -->
                 <article class="article">
                     <h1 class="article__title">Ответственны ли мы за чужие чувства?</h1>
                     <div class="article__meta">
@@ -55,7 +46,7 @@
                     </div>
                     
                     <div class="article__image">
-                        <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=400&fit=crop" alt="Психолог и клиент">
+                        <img src="article-img.jpg" alt="Психолог и клиент беседуют">
                     </div>
 
                     <div class="article__content">
@@ -80,7 +71,6 @@
                     </div>
                 </article>
 
-                <!-- Правая колонка: сайдбар -->
                 <aside class="sidebar">
                     <div class="sidebar__card">
                         <h3 class="sidebar__title">Подпишитесь на рассылку</h3>
@@ -101,12 +91,10 @@
                         </ul>
                     </div>
                 </aside>
-
             </div>
         </div>
     </main>
 
-    <!-- ПОДВАЛ (такой же) -->
     <footer class="footer">
         <div class="container">
             <div class="footer__grid">
@@ -116,7 +104,7 @@
                         <li><a href="#">Тарифы</a></li>
                         <li><a href="#">Для бизнеса</a></li>
                         <li><a href="#">Психологам</a></li>
-                        <li><a href="#">Блог</a></li>
+                        <li><a href="index.html">Блог</a></li>
                         <li><a href="#">Вебинары</a></li>
                     </ul>
                 </div>
@@ -153,9 +141,11 @@
     <script>
         const burger = document.querySelector('.burger');
         const nav = document.querySelector('.nav');
-        burger.addEventListener('click', function() {
-            nav.classList.toggle('nav--open');
-        });
+        if (burger && nav) {
+            burger.addEventListener('click', function() {
+                nav.classList.toggle('nav--open');
+            });
+        }
     </script>
 
 </body>
